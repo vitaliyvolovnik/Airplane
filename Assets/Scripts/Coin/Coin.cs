@@ -1,15 +1,20 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Coin : Entity
 {
 
     [SerializeField] private Rigidbody _coin;
+    [SerializeField] private CoinPickParticless _particless;
+
+    public static event UnityAction PickCoin;
 
     public override void Die(Airplane airplane)
     {
-
+        Instantiate(_particless.gameObject, transform.position, Quaternion.identity);
         _Sound.Play();
         Destroy(gameObject, 0.1f);
+        PickCoin?.Invoke();
 
     }
 

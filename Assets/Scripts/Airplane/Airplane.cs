@@ -7,7 +7,7 @@ public class Airplane : MonoBehaviour
 {
     
     [SerializeField] private GameObject AirplaneBody;
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         
         if (collision.gameObject.TryGetComponent(out Entity entity))
@@ -17,10 +17,21 @@ public class Airplane : MonoBehaviour
             
         }
     }
-    
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.TryGetComponent(out Entity entity))
+        {
+
+            entity.Die(this);
+
+        }
+    }
+
     public void Die()
     {
         Material newMat = Resources.Load("Red", typeof(Material)) as Material;
-        AirplaneBody.GetComponent<Renderer>().material = newMat;     
+        AirplaneBody.GetComponent<Renderer>().material = newMat;
+        this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
     }
 }

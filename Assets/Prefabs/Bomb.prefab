@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Sound: {fileID: -6016337080437254047}
-  airplane: {fileID: 1880620174, guid: 32ddd280e69e5d643b8808e93ba71f42, type: 3}
 --- !u!54 &8914728215682298407
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -189,7 +188,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2c5c52c67e6417e4ab8e44e31b6961e7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bc376db7a72deac4c955125adcc17416, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.098
   m_Pitch: 1

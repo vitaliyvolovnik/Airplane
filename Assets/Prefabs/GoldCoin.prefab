@@ -95,7 +95,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699207466559638740}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Sound: {fileID: -2320253638721874266}
   _coin: {fileID: -5747506701202274270}
+  _particless: {fileID: 2330873501003844450, guid: e1c6a404a34fe574dab013414c4d8e11, type: 3}
 --- !u!82 &-2320253638721874266
 AudioSource:
   m_ObjectHideFlags: 0
